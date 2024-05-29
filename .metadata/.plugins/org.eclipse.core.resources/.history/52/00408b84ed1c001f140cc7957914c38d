@@ -1,0 +1,10 @@
+/*Main 6*/
+package clases;
+
+public class Paciente {
+	private String nombre, apellido;
+	private int edad;
+	private double talla, peso;
+	
+	
+}

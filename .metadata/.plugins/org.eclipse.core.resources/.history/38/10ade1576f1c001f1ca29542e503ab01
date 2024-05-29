@@ -1,0 +1,6 @@
+package clases;
+
+public class Obrero {
+	private int codigo;
+	
+}

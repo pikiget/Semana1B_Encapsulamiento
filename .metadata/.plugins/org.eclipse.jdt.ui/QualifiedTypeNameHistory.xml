@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="clases.Celular"/>
+    <fullyQualifiedTypeName name="clases.Computadora"/>
+    <fullyQualifiedTypeName name="clases.Edificio"/>
+    <fullyQualifiedTypeName name="clases.Video"/>
+    <fullyQualifiedTypeName name="clases.Paciente"/>
+    <fullyQualifiedTypeName name="clases.Empleado"/>
+    <fullyQualifiedTypeName name="clases.Asesor"/>
+    <fullyQualifiedTypeName name="java.awt.Event"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
+    <fullyQualifiedTypeName name="clases.Pelota"/>
+</qualifiedTypeNameHistroy>

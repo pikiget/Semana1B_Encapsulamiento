@@ -1,0 +1,84 @@
+package gui;
+
+import java.awt.EventQueue;
+import java.awt.event.ActionEvent;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.border.EmptyBorder;
+
+import clases.Asesor;
+
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JButton;
+
+public class Main8 extends JFrame {
+
+	private static final long serialVersionUID = 1L;
+	private JPanel contentPane;
+	private JScrollPane scrollPane;
+	private JTextArea textArea;
+	private JButton btnProcesar;
+	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					Main8 frame = new Main8();
+					frame.setVisible(true);
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	/**
+	 * Create the frame.
+	 */
+	public Main8() {
+		setTitle("Problema 8");
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(100, 100, 450, 300);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+		
+		scrollPane = new JScrollPane();
+		scrollPane.setBounds(10, 68, 414, 182);
+		contentPane.add(scrollPane);
+		
+		textArea = new JTextArea();
+		scrollPane.setViewportView(textArea);
+		
+		btnProcesar = new JButton("Procesar");
+		btnProcesar.setBounds(167, 25, 89, 23);
+		contentPane.add(btnProcesar);
+	}
+	public void actionPerformed(ActionEvent e) {
+		if(e.getSource() == btnProcesar) {
+			actionPerformedBtnProcesar(e);
+		}
+	}
+	protected void actionPerformedBtnProcesar(ActionEvent e) {
+		Asesor a = new Asesor(97065, "Barney", 50, 45.5);
+		
+		a.setHoras(a.getHoras()+ 10);
+		a.setTarifa(a.getTarifa()*0.85);
+	
+		textArea.setText("Codigo: " + a.getCodigo() + "\n");
+		textArea.append("Nombre: " + a.getNombre() + "\n");
+		textArea.append("Horas trabajadas: " + a.getHoras() + "\n");
+		textArea.append("Tarifa por hora: " + a.getTarifa() + "\n\\n");
+		textArea.append("Sueldo Bruto: " + a.sueldoBruto() + "\n");
+		textArea.append("Descuento: " + a.descuento() + "\n");
+		textArea.append("Sueldo Bruto: " + a.sueldoNeto() + "\n");
+		
+	}
+}
